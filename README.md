@@ -30,77 +30,32 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
 - [How to Contribute](#how-to-contribute)
-
 - [Disclaimer](#disclaimer)
 
 
 
+## Sector Overview & Market Dynamics
+
+The global Web3 and blockchain infrastructure sector is estimated at **$10.2B in 2026** (growing at ~40% CAGR toward over $100B by 2032), operating alongside a stablecoin settlement market capitalization surpassing **$310B** with monthly transfer volumes nearing **$10T**. Market dynamics exhibit high consolidation in core settlement layers—featuring a "winner-take-most" duopoly in stablecoins (Tether and Circle controlling >83% market share)—while remaining moderately fragmented across developer tooling, node RPCs, and institutional custody providers competing on developer experience, multi-chain breadth, and compliance charters.
+
 ## SaaS/Hosted Platforms
 
-
-
-- **[Circle (USDC)](https://www.circle.com/)**  
-
-  **The most regulated stablecoin issuer** with USDC reserves held 100% in cash and cash-equivalents—majority in Circle Reserve Fund (USDXX), an SEC-registered 2a-7 government money market fund managed by BlackRock. Monthly third-party assurance by Deloitte. **Circle Programmable Wallets** and **Circle APIs** enable stablecoin payments, payouts, and cross-border transfers.
-
-
-
-- **[Tether (USDT)](https://tether.to/)**  
-
-  **Largest stablecoin by market cap** with ~$183B in token-related liabilities. Reserves concentrated in short-duration US Treasury bills (~$141B), physical gold (~$20B), and Bitcoin (~$7B). Quarterly attestations by BDO; KPMG issued first full financial audit for 2025 accounts.
-
-
-
-- **[Paxos](https://www.paxos.com/)**  
-
-  **First regulated blockchain infrastructure platform** (NYDFS). Issues USDP and PYUSD (for PayPal). Monthly attestations by KPMG. **Paxos Crypto Brokerage** and **Paxos Settlement Service** for institutional trading and settlement.
-
-
-
-- **[Anchorage Digital](https://www.anchorage.com/)**  
-
-  **The first federally chartered digital asset bank** in the US. Offers custody, staking, governance, and **Anchorage Digital Bank** services for institutions. **Trusted by protocols, funds, and enterprises**.
-
-
-
-- **[Fireblocks](https://www.fireblocks.com/)**  
-
-  **The leading digital asset custody and transfer platform** with MPC-based security. Features **Fireblocks Network** for instant transfers between institutions, **Automation** for DeFi and staking, and **Compliance** integrations.
-
-
-
-- **[BitGo](https://www.bitgo.com/)**  
-
-  **Institutional digital asset custody, wallets, and prime services**. Features **multi-signature security**, **BitGo Trust** (regulated custody), and **staking** services. **The standard for institutional Bitcoin custody**.
-
-
-
-- **[Coinbase Cloud](https://www.coinbase.com/cloud)**  
-
-  **Coinbase's developer platform** with Node, Staking, and Pay SDKs. Features **managed blockchain infrastructure**, **on-chain data**, and **crypto payment APIs**.
-
-
-
-- **[Alchemy](https://www.alchemy.com/)**  
-
-  **The leading Web3 development platform** with Node RPC, Subgraphs, and enhanced APIs. Features **Alchemy Supernode** for reliability, **Alchemy Transact** for gas management, and **Alchemy Monitor** for observability.
-
-
-
-- **[Infura](https://www.infura.io/)**  
-
-  **The original Ethereum RPC provider** (ConsenSys). Features **IPFS gateway**, **Ethereum and IPFS APIs**, and **Infura NFT SDK**. **The default RPC provider** for many Ethereum applications.
-
-
-
-- **[Chainalysis](https://www.chainalysis.com/)**  
-
-  **The blockchain data platform** for compliance, investigations, and risk management. Features **KYT (Know Your Transaction)**, **Reactor** for investigations, and **Business Data** for market intelligence.
+| Platform | Category / Description | Company Size (Valuation / Revenue) | Pricing (Starting Paid Tier) | Free Tier Limits |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Tether (USDT)](https://tether.to/)** | Stablecoin Issuer & Reserve Network; largest stablecoin by market cap (~$183B+ liabilities). | **$350B–$375B** valuation (est. private/secondary) | **0.10%** acquisition fee; redemptions at **greater of $1,000 or 0.10%** ($100k account minimum) | Direct institutional issuance requires $100,000 minimum deposit (secondary market wallet transfers pay only native network gas) |
+| **[Coinbase Cloud](https://www.coinbase.com/cloud)** | Managed blockchain infrastructure, Node APIs, Pay SDK, and non-custodial wallet solutions. | **$47.0B** market cap (Nasdaq: COIN; ~$5.6B+ revenue) | **$0.005** per billed wallet operation beyond free allowance (pay-as-you-go) | **5,000 free wallet operations/month**; unlimited free read operations |
+| **[Circle (USDC)](https://www.circle.com/)** | Regulated stablecoin issuer (USDC/EURC), Programmable Wallets, and Web3 Services APIs. | **$20.5B** valuation (NYSE: CRCL; ~$2.8B revenue) | **$0.050/wallet** (All-Included) or **$0.038/wallet** (Signing API) for next 4k Monthly Active Wallets | **1,000 Monthly Active Wallets (MAWs)/month free forever**; free fiat tokenization (Circle Mint) |
+| **[Alchemy](https://www.alchemy.com/)** | Leading Web3 developer platform, Supernode RPC, Subgraphs, and Rollup infrastructure. | **$10.2B** valuation (Series C; ~$440M revenue) | **$49/month** (Growth Tier; 400M Compute Units/mo, up to 10k CUPS) | **30,000,000 Compute Units (CUs)/month free forever** (capped at 300 CUPS, 5 apps, 5 webhooks) |
+| **[Chainalysis](https://www.chainalysis.com/)** | Blockchain analytics, KYT (Know Your Transaction), Reactor, and investigation compliance data. | **$8.6B** valuation (peaked Series F; ~$140M–$190M ARR) | **$25,000/year** (single-user baseline module license; enterprise suites ~$100k+/year) | 14-day evaluation sandbox trial upon sales qualification |
+| **[Fireblocks](https://www.fireblocks.com/)** | Institutional MPC custody, treasury management, and Fireblocks Network transfer rail. | **$8.0B** valuation (Series E; ~$120M–$150M revenue) | **$999/month** (Essentials Tier, up to $1M quarterly outbound volume cap; Enterprise starts at $36,000/year) | 30-day sandbox pilot/testnet evaluation trial for qualified institutional teams |
+| **[Anchorage Digital](https://www.anchorage.com/)** | Federally chartered digital asset bank (OCC) offering custody, staking, and prime brokerage. | **$4.2B** valuation (Series D / strategic round; ~$85M revenue) | **$3,000/month minimum platform fee** or **~15–30 bps (0.15%–0.30%) AUC annually** | 30-day proof-of-concept institutional integration sandbox |
+| **[Paxos](https://www.paxos.com/)** | NYDFS-regulated tokenization infrastructure; issuer of USDP, USDL, and partner for PayPal PYUSD. | **$2.4B** valuation (Series D; ~$143M revenue) | **0.12%–0.18%** trade execution fee ($1.75 minimum order fee via partner brokerage APIs) | Testnet developer sandbox access with free test minting and API testing keys |
+| **[Infura](https://www.infura.io/)** | Ethereum and IPFS RPC provider (ConsenSys); multi-chain endpoints, Gas API, and NFT SDK. | **$1.5B** valuation (ConsenSys parent Series D; peak $7.0B) | **$50/month** (Developer Tier; 15,000,000 daily credits, up to 2,000 credits/sec) | **3,000,000 daily credits/day free forever** (capped at 500 credits/sec, 1 active API key) |
+| **[BitGo](https://www.bitgo.com/)** | Multi-sig & MPC institutional digital asset custody, qualified trust custody, and wallets. | **$853M** valuation (NYSE: BTGO; ~$195M revenue) | **€2,500 setup fee** + **10–25 bps AUC annually** (requiring $1M/mo min volume threshold) | Testnet developer sandbox access (free API key on testnet environments) |
 
 
 

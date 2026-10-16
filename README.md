@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-llueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Blockchain-WEB3/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Blockchain-WEB3?style=flat-square&color=gold" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Blockchain-WEB3/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Blockchain-WEB3?style=flat-square&color=gold" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Blockchain-WEB3/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Blockchain-WEB3?style=flat-square&color=blue" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Blockchain-WEB3/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Blockchain-WEB3?style=flat-square&color=red" alt="GitHub Issues" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Blockchain-WEB3/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Blockchain-WEB3?style=flat-square&color=green" alt="License" /></a>
@@ -73,7 +73,7 @@ Below is the verified breakdown of leading Web3 SaaS infrastructure providers, s
 
 ## 🛠️ Open-Source GitHub Projects
 
-All open-source projects are sorted in **descending order by GitHub star count**. Beside each repository name, a social star badge directly links to that repository's stargazers page.
+All open-source projects are sorted in **descending order by GitHub Stars_Count**. Beside each repository name, a social Stars_Badge directly links to that repository's stargazers page.
 
 ### 🏆 Top Starred Frameworks & Blockchain Protocols
 
@@ -173,7 +173,7 @@ Contributions make the Web3 open-source community thrive! Follow these steps to 
 
 1. 🍴 **Fork the repo** to your GitHub profile.
 2. 🌿 **Create a feature branch** (`git checkout -b feature/add-new-web3-tool`).
-3. 📝 **Add/edit entries in `README.md`** following existing formatting (include name, repo link, star badge, license, and objective description).
+3. 📝 **Add/edit entries in `README.md`** following existing formatting (include name, repo link, Stars_Badge, license, and objective description).
 4. 🚀 **Submit a Pull Request** with a concise summary of the project's utility and merit.
 
 ---

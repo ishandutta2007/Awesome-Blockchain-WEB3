@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%" style="border-radius:12px;overflow:hidden;">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0b10" />
+      <stop offset="45%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#050814" />
+    </linearGradient>
+
+    <linearGradient id="accent-cyan-purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="pill-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(56, 189, 248, 0.25)" />
+      <stop offset="100%" stop-color="rgba(192, 132, 252, 0.1)" />
+    </linearGradient>
+
+    <!-- Filter for soft ambient glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="node-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulseOrb {
+      0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.35; }
+      50% { transform: scale(1.15) translate(15px, -10px); opacity: 0.6; }
+    }
+    @keyframes pulseOrb2 {
+      0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.25; }
+      50% { transform: scale(1.2) translate(-20px, 12px); opacity: 0.5; }
+    }
+    @keyframes floatParticle {
+      0% { transform: translateY(0px); opacity: 0.2; }
+      50% { opacity: 0.8; }
+      100% { transform: translateY(-30px); opacity: 0.2; }
+    }
+    @keyframes dashMove {
+      to { stroke-dashoffset: -40; }
+    }
+    @keyframes badgeFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+    .orb-1 { animation: pulseOrb 8s ease-in-out infinite; }
+    .orb-2 { animation: pulseOrb2 10s ease-in-out infinite; }
+    .data-link {
+      stroke-dasharray: 6 6;
+      animation: dashMove 3s linear infinite;
+    }
+    .float-badge {
+      animation: badgeFloat 4s ease-in-out infinite;
+    }
+    .float-badge-delayed {
+      animation: badgeFloat 4s ease-in-out 2s infinite;
+    }
+  </style>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="360" fill="url(#bg-grad)" />
+  <rect width="1200" height="360" fill="url(#grid)" />
+
+  <!-- Dynamic Ambient Glow Orbs in Background -->
+  <g opacity="0.45" style="mix-blend-mode: screen;">
+    <circle class="orb-1" cx="220" cy="180" r="160" fill="#38bdf8" filter="url(#glow)" />
+    <circle class="orb-2" cx="980" cy="160" r="180" fill="#8b5cf6" filter="url(#glow)" />
+    <circle class="orb-1" cx="600" cy="90" r="130" fill="#ec4899" filter="url(#glow)" opacity="0.25" />
+  </g>
+
+  <!-- Dynamic Blockchain Mesh Lines & Floating Network Nodes in Background -->
+  <g stroke="rgba(56, 189, 248, 0.25)" stroke-width="1.5">
+    <line x1="80" y1="90" x2="260" y2="50" class="data-link" />
+    <line x1="260" y1="50" x2="420" y2="100" class="data-link" />
+    <line x1="780" y1="80" x2="940" y2="50" class="data-link" />
+    <line x1="940" y1="50" x2="1120" y2="110" class="data-link" />
+    <line x1="100" y1="280" x2="300" y2="310" class="data-link" />
+    <line x1="900" y1="290" x2="1080" y2="260" class="data-link" />
+  </g>
+
+  <!-- Constellation Nodes with Glow -->
+  <g filter="url(#node-glow)">
+    <circle cx="80" cy="90" r="4" fill="#38bdf8" />
+    <circle cx="260" cy="50" r="5" fill="#818cf8" />
+    <circle cx="420" cy="100" r="3.5" fill="#38bdf8" />
+    <circle cx="780" cy="80" r="4" fill="#c084fc" />
+    <circle cx="940" cy="50" r="5.5" fill="#38bdf8" />
+    <circle cx="1120" cy="110" r="4.5" fill="#818cf8" />
+    <circle cx="100" cy="280" r="4" fill="#818cf8" />
+    <circle cx="300" cy="310" r="5" fill="#38bdf8" />
+    <circle cx="900" cy="290" r="4" fill="#c084fc" />
+    <circle cx="1080" cy="260" r="5" fill="#38bdf8" />
+  </g>
+
+  <!-- Dynamic Interactive Ecosystem Category Pills (Side Highlights) -->
+  <g class="float-badge">
+    <rect x="50" y="160" width="130" height="34" rx="17" fill="url(#pill-glow)" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2" />
+    <text x="115" y="182" fill="#e0f2fe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">⚡ RPC NODES</text>
+  </g>
+
+  <g class="float-badge-delayed">
+    <rect x="1020" y="160" width="135" height="34" rx="17" fill="url(#pill-glow)" stroke="rgba(192, 132, 252, 0.4)" stroke-width="1.2" />
+    <text x="1087" y="182" fill="#f5f3ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">🔒 STABLECOINS</text>
+  </g>
+
+  <!-- Top Badge Tag in Foreground -->
+  <g transform="translate(600, 52)">
+    <rect x="-140" y="-15" width="280" height="30" rx="15" fill="rgba(255, 255, 255, 0.06)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+    <circle cx="-118" cy="0" r="4" fill="#10b981" />
+    <text x="8" y="4.5" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" letter-spacing="1.5" text-anchor="middle">CURATED WEB3 &amp; BLOCKCHAIN STACK</text>
+  </g>
+
+  <!-- Foreground High-Contrast Title & Subtitle (Clean & Never Obscured) -->
+  <g text-anchor="middle">
+    <!-- Main Title -->
+    <text x="600" y="138" fill="url(#accent-cyan-purple)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, sans-serif" font-size="44" font-weight="800" letter-spacing="-1">
+      Awesome Blockchain &amp; Web3
+    </text>
+
+    <!-- Subtitle Line 1 -->
+    <text x="600" y="184" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, sans-serif" font-size="18" font-weight="500">
+      The Definitive Guide to Stablecoins, RPC Nodes, Institutional Custody &amp; Smart Contracts
+    </text>
+
+    <!-- Subtitle Line 2 / Meta Tags -->
+    <text x="600" y="214" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, sans-serif" font-size="13.5" font-weight="400">
+      Enterprise SaaS Solutions • Battle-Tested Open Source • Real-Time GitHub Stars • Verified Pricing
+    </text>
+  </g>
+
+  <!-- Foreground Footer Badges inside Banner -->
+  <g transform="translate(600, 275)" text-anchor="middle">
+    <!-- Pill 1 -->
+    <g transform="translate(-240, 0)">
+      <rect x="-70" y="-14" width="140" height="28" rx="8" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
+      <text x="0" y="5" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">⛓️ L1 / L2 Protocols</text>
+    </g>
+
+    <!-- Pill 2 -->
+    <g transform="translate(-80, 0)">
+      <rect x="-70" y="-14" width="140" height="28" rx="8" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(129, 140, 248, 0.3)" stroke-width="1" />
+      <text x="0" y="5" fill="#818cf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">📜 Smart Contracts</text>
+    </g>
+
+    <!-- Pill 3 -->
+    <g transform="translate(80, 0)">
+      <rect x="-70" y="-14" width="140" height="28" rx="8" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(192, 132, 252, 0.3)" stroke-width="1" />
+      <text x="0" y="5" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">🔐 MPC &amp; Wallets</text>
+    </g>
+
+    <!-- Pill 4 -->
+    <g transform="translate(240, 0)">
+      <rect x="-70" y="-14" width="140" height="28" rx="8" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(236, 72, 153, 0.3)" stroke-width="1" />
+      <text x="0" y="5" fill="#f472b6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">🌐 DePIN &amp; Oracles</text>
+    </g>
+  </g>
+
+  <!-- Modern bottom accent border line -->
+  <rect x="0" y="356" width="1200" height="4" fill="url(#accent-cyan-purple)" />
+</svg>
